@@ -1,5 +1,5 @@
 {% set name = "drf-haystack" %}
-{% set version = "1.8.4" %}
+{% set version = "1.8.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3304d951d18733e416831bce25b60274497691b9ae9c55c16b3c35477b783028
+  sha256: cd75489ffa14946f72da94b7fa789487eb178239d2972bc216d5308fcda13aae
 
 build:
   noarch: python
@@ -21,9 +21,9 @@ requirements:
   run:
     - python
     - python-dateutil
-    - django >=1.11,<2.1
-    - django-haystack >=2.8
-    - djangorestframework >=3.7
+    - django >=2.2,<3.2
+    - django-haystack >=2.8,<3.1
+    - djangorestframework >=3.7,<3.13
 
 test:
   imports:
@@ -43,3 +43,4 @@ about:
 extra:
   recipe-maintainers:
     - scopatz
+    - xmnlab
