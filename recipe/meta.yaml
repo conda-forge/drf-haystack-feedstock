@@ -1,5 +1,5 @@
 {% set name = "drf-haystack" %}
-{% set version = "1.8.9" %}
+{% set version = "1.8.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd75489ffa14946f72da94b7fa789487eb178239d2972bc216d5308fcda13aae
+  sha256: e091e4c13110117916cdd247d30b6314451be9e2f1183db60a61ab1031b13b55
 
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - python-dateutil
     - django >=2.2,<3.2
     - django-haystack >=2.8,<3.1
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Haystack for Django REST Framework'
+  summary: Haystack for Django REST Framework
   description: |
     Small library which tries to simplify integration of Haystack with Django REST Framework.
   doc_url: https://drf-haystack.readthedocs.io/en/latest/index.html#
