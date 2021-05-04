@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - python-dateutil
     - django >=2.2,<3.2
     - django-haystack >=2.8,<3.1
