@@ -1,5 +1,5 @@
 {% set name = "drf-haystack" %}
-{% set version = "1.8.11" %}
+{% set version = "1.8.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c8744aed00ffc176834f14dd301536a0572e0dc172e38d2d34ad98a32ce03283
+  sha256: 978827af342a10e2ab0ba626c44d5ee843d3771cfdb528b1b9012909b2f21aeb
 
 build:
   noarch: python
